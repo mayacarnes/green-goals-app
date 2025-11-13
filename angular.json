@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "loans-ui": {
+    "green-goals-ui": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -58,12 +58,16 @@
         },
         "serve": {
           "builder": "@angular/build:dev-server",
+          "options": {
+            "proxyConfig": "proxy.conf.json",
+            "hmr": false
+          },
           "configurations": {
             "production": {
-              "buildTarget": "loans-ui:build:production"
+              "buildTarget": "green-goals-ui:build:production"
             },
             "development": {
-              "buildTarget": "loans-ui:build:development"
+              "buildTarget": "green-goals-ui:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -86,8 +90,7 @@
               }
             ],
             "styles": [
-              "src/styles.css",
-              "node_modules/@fortawesome/fontawesome-free/css/all.min.css"
+              "src/styles.css"
             ],
             "scripts": []
           }
@@ -96,4 +99,3 @@
     }
   }
 }
-

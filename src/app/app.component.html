@@ -20,24 +20,13 @@ import { RouterOutlet } from '@angular/router';
 
     <app-footer></app-footer>
   `,
-  styles: [`
-    .main-content {
-      margin-left: 0;
-      transition: margin-left 0.3s;
-      padding: 20px;
-      background-color: #e6f4ea; /* light green background */
-      min-height: calc(100vh - 60px); /* leave space for header/footer */
-    }
-    .main-content.sidebar-open {
-      margin-left: 200px;
-    }
-  `]
 })
 export class AppComponent {
-  title = 'GreenGoals App';
+  title = 'GreenGoals';
   sidebarOpen = false;
 
   toggleSidebar() {
     this.sidebarOpen = !this.sidebarOpen;
   }
 }
+

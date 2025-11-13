@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [CommonModule],
-  templateUrl: './footer.html',
-  styleUrls: ['./footer.css']
+  template: `
+    <footer style="text-align:center; padding:10px; background:#2e7d32; color:white;">
+      © 2025 Green Goals App
+    </footer>
+  `
 })
 export class FooterComponent {}

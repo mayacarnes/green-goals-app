@@ -1,0 +1,18 @@
+<header>
+  <h1>{{ title }}</h1>
+
+  <button (click)="toggleSidebar.emit()" class="sidebar-toggle">☰</button>
+
+  <div class="auth">
+    <ng-container *ngIf="!auth.isLoggedIn(); else loggedIn">
+      <input [(ngModel)]="username" placeholder="Username" />
+      <input [(ngModel)]="password" type="password" placeholder="Password" />
+      <button (click)="onLogin()">Login</button>
+      <a routerLink="/signup">Signup</a>
+    </ng-container>
+    <ng-template #loggedIn>
+      <span>Welcome, {{ auth.user?.username || 'User' }}</span>
+      <button (click)="onLogout()">Logout</button>
+    </ng-template>
+  </div>
+</header>
